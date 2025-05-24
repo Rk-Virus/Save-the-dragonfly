@@ -25,14 +25,6 @@ Control the dragonfly and avoid obstacles to keep it safe. The game tests your r
    python main.py
    ```
 
-## 📂 Project Structure
-
-```
-Save-the-Dragonfly/
-├── assets/         # Images and sounds used in the game
-├── main.py         # Main game script
-└── README.md       # This file
-```
 
 ## 📸 Screenshot
 
@@ -40,9 +32,7 @@ Save-the-Dragonfly/
 
 ## 📌 Features
 - Simple controls  
-- Smooth gameplay  
 - Score tracking  
-- Fun sound effects and animations  
 
 ## 🤝 Contribution
 
