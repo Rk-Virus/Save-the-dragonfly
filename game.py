@@ -1,11 +1,24 @@
+import os
+import sys
+import time
 import math
 import pygame
-import sys
 import random
 from button import Button
 from game_stats import GameStats
 from scoreboard import Scoreboard
 
+#to create .exe file
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
+# initialize pygame
 pygame.init()
 
 #game variables
@@ -29,8 +42,8 @@ dir = 1
 
 screen = pygame.display.set_mode((scrnWidth, scrnHeight))
 pygame.display.set_caption("Save the Dragonfly")
-player = pygame.image.load("chidda.png").convert()
-bg = pygame.image.load("background.png").convert()
+player = pygame.image.load(resource_path("chidda.png")).convert()
+bg = pygame.image.load(resource_path("background.png")).convert()
 pygame.display.update()
 
 play_button = Button(screen, "Play")
@@ -88,15 +101,15 @@ while True:
         if dist1 <= 35 or dist2 <= 35 or dist3 <= 35 or dist4 <= 35:
             print("Game Over!")
             print("Your Score : ",stats.score)
-
             # saving highscore 
-            f = open("highscore.txt","r")
+            f = open(resource_path("highscore.txt"),"r")
             hs = int(f.read())
             f.close()
             if stats.score > hs:
-                f = open("highscore.txt","w")
+                f = open(resource_path("highscore.txt"),"w")
                 f.write(str(stats.score))
                 f.close()
+            time.sleep(10)
             sys.exit()
 
         if villain1Y >= scrnHeight or villain2Y <= 0:
@@ -132,6 +145,6 @@ while True:
         villain4X -= villainSpeed
 
 
-pygame.quit()
-input()
-quit()
+# pygame.quit()
+# input()
+# quit()
