@@ -4,7 +4,7 @@ A simple and fun Pygame project where you help a dragonfly escape dangers and st
 
 ## 📦 Download
 
-You can download the latest Windows executable from **[here](https://github.com/Rk-Virus/Save-the-dragonfly/releases/download/v1.0.0/game.exe)** section.
+You can download the latest Windows executable from **[here](https://github.com/Rk-Virus/Save-the-dragonfly/releases/download/v1.0.0/game.exe)**
 
 ## 🎮 Gameplay
 
